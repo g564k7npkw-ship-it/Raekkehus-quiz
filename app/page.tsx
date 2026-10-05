@@ -19,6 +19,7 @@ import {
   loadAllScores,
   loadPlayer,
   savePlayer,
+  syncScores,
   type AllScores,
 } from "@/lib/storage";
 import { BASE_PATH } from "@/lib/utils";
@@ -32,9 +33,17 @@ export default function HomePage() {
   const [counts, setCounts] = useState<Partial<Record<CategoryChoice, number>>>({});
 
   // Valgt spiller og scores ligger i localStorage og læses efter mount.
+  // Derefter hentes de andres point fra den fælles stilling (kun på Vercel).
   useEffect(() => {
     setPlayer(loadPlayer());
     setScores(loadAllScores());
+    let cancelled = false;
+    void syncScores().then((ok) => {
+      if (ok && !cancelled) setScores(loadAllScores());
+    });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   // Antal spørgsmål pr. kategori, så man kan se det på knapperne.

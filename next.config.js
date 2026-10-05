@@ -11,7 +11,7 @@
 // ---------------------------------------------------------------------------
 
 const isPages = process.env.GITHUB_PAGES === "true";
-const basePath = isPages ? process.env.PAGES_BASE_PATH ?? "/raekkehus-quiz" : "";
+const basePath = isPages ? process.env.PAGES_BASE_PATH ?? "/Raekkehus-quiz" : "";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

@@ -32,7 +32,7 @@ function repoName() {
   } catch {
     // Intet git-repo eller ingen "origin": brug standardnavnet.
   }
-  return "raekkehus-quiz";
+  return "Raekkehus-quiz";
 }
 
 const name = repoName();
@@ -40,11 +40,21 @@ const name = repoName();
 const basePath = /\.github\.io$/i.test(name) ? "" : `/${name}`;
 
 console.log(`Bygger til GitHub Pages med basePath "${basePath || "/"}" ...`);
-execSync("npx next build", {
-  cwd: root,
-  stdio: "inherit",
-  env: { ...process.env, GITHUB_PAGES: "true", PAGES_BASE_PATH: basePath },
-});
+// /api/scores kræver en server (fælles stilling på Vercel) og kan ikke eksporteres.
+// Den lægges til side under bygningen; på GitHub Pages bruges score-links i stedet.
+const scoresRoute = path.join(root, "app", "api", "scores");
+const parked = path.join(root, ".scores-route-parked");
+fs.rmSync(parked, { recursive: true, force: true });
+if (fs.existsSync(scoresRoute)) fs.renameSync(scoresRoute, parked);
+try {
+  execSync("npx next build", {
+    cwd: root,
+    stdio: "inherit",
+    env: { ...process.env, GITHUB_PAGES: "true", PAGES_BASE_PATH: basePath },
+  });
+} finally {
+  if (fs.existsSync(parked)) fs.renameSync(parked, scoresRoute);
+}
 
 const out = path.join(root, "out");
 const docs = path.join(root, "docs");

@@ -13,6 +13,8 @@ import {
   loadPlayer,
   ranking,
   resetAllScores,
+  resetSharedScores,
+  syncScores,
   totalAnswered,
   trailers,
   type AllScores,
@@ -32,13 +34,33 @@ function Leaderboard() {
   const [confirmReset, setConfirmReset] = useState(false);
   const [notice, setNotice] = useState<string | null>(null);
   const [shareLink, setShareLink] = useState<string | null>(null);
+  // true = stillingen deles automatisk via databasen (på Vercel).
+  const [shared, setShared] = useState(false);
   const handledCode = useRef<string | null>(null);
 
-  // Læs alle fire spilleres scores fra localStorage.
+  // Læs alle fire spilleres scores fra localStorage, og hent de andres
+  // fra den fælles stilling – med det samme og derefter hvert 20. sekund.
   useEffect(() => {
     setPlayer(loadPlayer());
     setScores(loadAllScores());
     setLoaded(true);
+
+    let cancelled = false;
+    async function refresh() {
+      const ok = await syncScores();
+      if (cancelled) return;
+      setShared(ok);
+      if (ok) {
+        setScores(loadAllScores());
+        setVersion((value) => value + 1);
+      }
+    }
+    void refresh();
+    const timer = window.setInterval(() => void refresh(), 20_000);
+    return () => {
+      cancelled = true;
+      window.clearInterval(timer);
+    };
   }, []);
 
   // Åbnet via et "Del min score"-link? Så importeres den delte score.
@@ -68,13 +90,22 @@ function Leaderboard() {
     router.replace("/leaderboard");
   }, [importCode, router]);
 
-  function handleReset() {
+  async function handleReset() {
+    if (shared && !(await resetSharedScores())) {
+      setConfirmReset(false);
+      setNotice("Kunne ikke nulstille for gruppen. Tjek nettet, og prøv igen.");
+      return;
+    }
     resetAllScores();
     setScores(loadAllScores());
     setVersion((value) => value + 1);
     setConfirmReset(false);
     setShareLink(null);
-    setNotice("Scores er nulstillet. God ny uge!");
+    setNotice(
+      shared
+        ? "Scores er nulstillet for hele gruppen. God ny uge!"
+        : "Scores er nulstillet. God ny uge!"
+    );
   }
 
   async function handleShare() {
@@ -226,33 +257,40 @@ function Leaderboard() {
       <WeeklySummary scores={scores} version={version} />
 
       {/* Deling mellem enheder */}
-      <section className="space-y-3 rounded-xl bg-slate-800 p-4">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-400">
-          Del din score
-        </h2>
-        <p className="text-sm text-slate-300">
-          Scores gemmes i browseren på den enhed, du spiller på. Spiller I på
-          hver jeres telefon, så send dit link i gruppechatten – når de andre
-          åbner det, kommer din score ind i deres stilling.
+      {shared ? (
+        <p className="rounded-xl bg-slate-800 p-4 text-sm text-slate-300">
+          Stillingen deles automatisk med de andre i gruppen og opdateres af
+          sig selv.
         </p>
-        <button
-          type="button"
-          onClick={() => void handleShare()}
-          disabled={!player}
-          className="rounded-lg bg-emerald-500 px-4 py-3 font-semibold text-slate-900 hover:bg-emerald-400 disabled:cursor-not-allowed disabled:bg-slate-700 disabled:text-slate-400"
-        >
-          {player ? `Kopiér link med ${player}s score` : "Vælg en spiller på forsiden først"}
-        </button>
-        {shareLink && (
-          <input
-            readOnly
-            value={shareLink}
-            aria-label="Link med din score"
-            onFocus={(event) => event.currentTarget.select()}
-            className="w-full rounded-lg border border-slate-600 bg-slate-900 px-3 py-2 text-xs text-slate-300"
-          />
-        )}
-      </section>
+      ) : (
+        <section className="space-y-3 rounded-xl bg-slate-800 p-4">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-400">
+            Del din score
+          </h2>
+          <p className="text-sm text-slate-300">
+            Scores gemmes i browseren på den enhed, du spiller på. Spiller I på
+            hver jeres telefon, så send dit link i gruppechatten – når de andre
+            åbner det, kommer din score ind i deres stilling.
+          </p>
+          <button
+            type="button"
+            onClick={() => void handleShare()}
+            disabled={!player}
+            className="rounded-lg bg-emerald-500 px-4 py-3 font-semibold text-slate-900 hover:bg-emerald-400 disabled:cursor-not-allowed disabled:bg-slate-700 disabled:text-slate-400"
+          >
+            {player ? `Kopiér link med ${player}s score` : "Vælg en spiller på forsiden først"}
+          </button>
+          {shareLink && (
+            <input
+              readOnly
+              value={shareLink}
+              aria-label="Link med din score"
+              onFocus={(event) => event.currentTarget.select()}
+              className="w-full rounded-lg border border-slate-600 bg-slate-900 px-3 py-2 text-xs text-slate-300"
+            />
+          )}
+        </section>
+      )}
 
       {/* Manuel nulstilling ved ugens start */}
       <section className="space-y-3 rounded-xl bg-slate-800 p-4">
@@ -262,16 +300,18 @@ function Leaderboard() {
         <p className="text-sm text-slate-300">
           Nulstil mandag, når ugens taber er kåret. Stillingen gemmes som
           &quot;sidste uge&quot; i ugeoversigten, og alle fire spillere starter
-          på 0 på denne enhed.
+          på 0 {shared ? "hos hele gruppen" : "på denne enhed"}.
         </p>
         {confirmReset ? (
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
             <span className="text-sm text-slate-200">
-              Nulstil alle scores på denne enhed?
+              {shared
+                ? "Nulstil alle scores for hele gruppen?"
+                : "Nulstil alle scores på denne enhed?"}
             </span>
             <button
               type="button"
-              onClick={handleReset}
+              onClick={() => void handleReset()}
               className="rounded-lg bg-rose-500 px-4 py-3 font-semibold text-white hover:bg-rose-400"
             >
               Ja, nulstil

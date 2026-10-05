@@ -12,12 +12,16 @@ Efter ENHVER ændring i kode eller i `data/questions.json`:
 
 ```bash
 npm install          # kun første gang i en ny session
-npm run build:pages  # bygger docs/ med repo-navnet som basePath
+npm run build:pages -- Raekkehus-quiz  # bygger docs/ (repoet hedder Raekkehus-quiz med STORT R)
 ```
 
 Commit `docs/` sammen med ændringen. Ret aldrig i `docs/` i hånden.
 
-`npm run build:pages` læser repo-navnet fra `git remote`. Virker det ikke, så giv navnet med: `npm run build:pages -- <repo-navn>`.
+Giv altid navnet med som ovenfor. Uden navn læses det fra `git remote`, som i Claude Code-sessioner kan stå med lille r – så virker GitHub Pages ikke (404 på filerne).
+
+## Fælles stilling (Vercel + database)
+
+På Vercel deles scores automatisk via `app/api/scores/route.ts` og en Upstash Redis-database (oprettet i Vercel under Storage, miljøvariablerne `KV_REST_API_URL`/`KV_REST_API_TOKEN` eller `UPSTASH_REDIS_REST_URL`/`UPSTASH_REDIS_REST_TOKEN`). Klienten kalder `syncScores()` i `lib/storage.ts`. Uden database, og på GitHub Pages, falder appen tilbage til score-links. `scripts/build-pages.js` lægger `app/api/scores` til side under eksporten.
 
 ## Tjek før commit
 
@@ -29,7 +33,7 @@ npm run build:pages  # statisk build til docs/
 
 ## Regler i koden
 
-- Ingen server-kode, der kræver en kørende server: `app/api/questions/route.ts` skal forblive `force-static`, ellers kan appen ikke eksporteres til GitHub Pages.
+- `app/api/questions/route.ts` skal forblive `force-static`, ellers kan appen ikke eksporteres til GitHub Pages. Den eneste server-rute er `app/api/scores` (se ovenfor).
 - Egne `fetch()`-kald og hjemmelavede adresser skal bruge `BASE_PATH` fra `lib/utils.ts`. `next/link` og `router.push` sætter selv basePath på.
 - localStorage læses kun i `useEffect` (se `lib/storage.ts`), aldrig under rendering.
 - Spillere, kategorier og spilleregler står i `lib/types.ts`.

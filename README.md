@@ -27,7 +27,7 @@ Mappen `docs/` indeholder en færdigbygget udgave af appen. GitHub kan vise den 
 
 ```bash
 npm install
-npm run build:pages
+npm run build:pages -- Raekkehus-quiz
 ```
 
 Commit derefter `docs/` og push til `main`. Scriptet finder selv repo-navnet fra git.
@@ -49,7 +49,11 @@ Vercel virker også med private repoer og bygger selv appen ved hvert push, så 
 
 ### Flere telefoner
 
-localStorage findes kun i den browser, man spiller i. Spiller I på hver jeres telefon, så tryk **Kopiér link med … score** på siden Stilling, og send linket i gruppechatten. Når de andre åbner linket, kommer din score ind i deres stilling. Send et nyt link, når du har spillet igen. Nulstilling skal gøres på hver enhed.
+**På Vercel med database:** stillingen deles automatisk. Ens egen score sendes efter hvert svar, og de andres hentes, når forsiden, quizzen eller Stilling åbnes (Stilling opdaterer hvert 20. sekund). Nulstilling på Stilling gælder hele gruppen.
+
+Opsætning: åbn projektet på vercel.com → **Storage** → **Create Database** → **Upstash for Redis** (gratis) → forbind den til projektet → **Deployments** → **Redeploy**.
+
+**Uden database (fx GitHub Pages):** localStorage findes kun i den browser, man spiller i. Spiller I på hver jeres telefon, så tryk **Kopiér link med … score** på siden Stilling, og send linket i gruppechatten. Når de andre åbner linket, kommer din score ind i deres stilling. Send et nyt link, når du har spillet igen. Nulstilling skal gøres på hver enhed.
 
 ## Tilføj spørgsmål
 

@@ -5,9 +5,11 @@
 //  - Hver spiller har sin egen nøgle: `quiz_scores_{spillernavn}`.
 //  - Værdien er et Score-objekt (se lib/types.ts) gemt som JSON.
 //  - Et rigtigt svar giver +1, et forkert 0, og et hint trækker 1 point.
-//  - localStorage bor i den enkelte browser. Spiller I på hver jeres telefon,
+//  - localStorage bor i den enkelte browser. På Vercel sendes ens egen score
+//    automatisk til en fælles database, og de andres hentes derfra
+//    (se syncScores nederst i filen). Uden database (fx på GitHub Pages)
 //    deles stillingen med "Del min score"-linket på leaderboardet
-//    (se encodeShare / importShared nederst i filen).
+//    (se encodeShare / importShared).
 //
 // Alle funktioner tjekker `typeof window`, så de er ufarlige at importere
 // i komponenter, som Next.js også kører på serveren.
@@ -27,10 +29,12 @@ import {
   type Score,
   type WeekSummary,
 } from "./types";
+import { BASE_PATH } from "./utils";
 
 const PLAYER_KEY = "quiz_player";
 const LAST_VISIT_WEEK_KEY = "quiz_last_visit_week";
 const LAST_WEEK_SUMMARY_KEY = "quiz_last_week_summary";
+const LAST_RESET_KEY = "quiz_last_reset";
 
 export const scoreKey = (player: Player) => `quiz_scores_${player}`;
 
@@ -254,6 +258,7 @@ export function recordAnswer(
     timestamp: Date.now(),
   });
   saveScore(player, updated);
+  void pushScore(player, updated);
   return updated;
 }
 
@@ -270,6 +275,7 @@ export function recordHint(player: Player, question: Question): Score {
     timestamp: Date.now(),
   });
   saveScore(player, updated);
+  void pushScore(player, updated);
   return updated;
 }
 
@@ -340,11 +346,13 @@ export function loadLastWeekSummary(): WeekSummary | null {
 }
 
 /**
- * Nulstiller alle spilleres scores. Inden da gemmes et øjebliksbillede af
+ * Nulstiller spillernes scores. Inden da gemmes et øjebliksbillede af
  * ugen (vinder, sidsteplads, antal besvarede), som WeeklySummary viser som
  * "sidste uge". Har ingen svaret på noget, beholdes det gamle øjebliksbillede.
+ * Med `onlyBefore` fjernes kun scores, der er ændret før det tidspunkt
+ * (bruges når en anden i gruppen har nulstillet).
  */
-export function resetAllScores(): void {
+export function resetAllScores(onlyBefore?: number): void {
   const scores = loadAllScores();
   const answered = totalAnswered(scores);
 
@@ -366,7 +374,11 @@ export function resetAllScores(): void {
     write(LAST_WEEK_SUMMARY_KEY, JSON.stringify(summary));
   }
 
-  for (const player of PLAYERS) remove(scoreKey(player));
+  for (const player of PLAYERS) {
+    if (onlyBefore === undefined || scores[player].updatedAt <= onlyBefore) {
+      remove(scoreKey(player));
+    }
+  }
   acknowledgeWeek();
 }
 
@@ -402,9 +414,8 @@ function fromBase64Url(code: string): string {
   return new TextDecoder().decode(bytes);
 }
 
-/** Pakker en spillers score til en kort kode, der kan sættes på et link. */
-export function encodeShare(player: Player, score: Score): string {
-  const payload: SharePayload = {
+function toPayload(player: Player, score: Score): SharePayload {
+  return {
     p: player,
     s: score.totalScore,
     c: CATEGORIES.map((category) => score.perCategoryScores[category] ?? 0),
@@ -413,7 +424,11 @@ export function encodeShare(player: Player, score: Score): string {
     w: score.weekKey,
     u: score.updatedAt,
   };
-  return toBase64Url(JSON.stringify(payload));
+}
+
+/** Pakker en spillers score til en kort kode, der kan sættes på et link. */
+export function encodeShare(player: Player, score: Score): string {
+  return toBase64Url(JSON.stringify(toPayload(player, score)));
 }
 
 export type ImportResult =
@@ -429,40 +444,107 @@ export type ImportResult =
  */
 export function importShared(code: string): ImportResult {
   try {
-    const data = JSON.parse(fromBase64Url(code)) as Partial<SharePayload>;
-    if (!isPlayer(data.p) || !Array.isArray(data.c)) {
-      return { status: "invalid" };
-    }
-    const player = data.p;
-    const updatedAt = num(data.u);
-    const local = loadScore(player);
-    // Din egen spiller på denne enhed har den fulde historik (bruges til at
-    // huske, hvilke spørgsmål der allerede har givet point) – den overskrives ikke.
-    if (player === loadPlayer() && local.history.length > 0) {
-      return { status: "own", player };
-    }
-    if (updatedAt <= local.updatedAt) {
-      return { status: "older", player };
-    }
-
-    const perCategoryScores: Partial<Record<Category, number>> = {};
-    CATEGORIES.forEach((category, index) => {
-      const value = num(data.c?.[index]);
-      if (value !== 0) perCategoryScores[category] = value;
-    });
-
-    const imported: Score = {
-      totalScore: num(data.s),
-      perCategoryScores,
-      history: [], // historikken er for lang til et link – tællerne er nok til stillingen
-      correctCount: Math.max(0, num(data.r)),
-      answeredCount: Math.max(0, num(data.a)),
-      weekKey: typeof data.w === "string" ? data.w : getWeekKey(),
-      updatedAt,
-    };
-    saveScore(player, imported);
-    return { status: "imported", player, totalScore: imported.totalScore };
+    return importPayload(JSON.parse(fromBase64Url(code)) as Partial<SharePayload>);
   } catch {
     return { status: "invalid" };
+  }
+}
+
+function importPayload(data: Partial<SharePayload>): ImportResult {
+  if (!isPlayer(data.p) || !Array.isArray(data.c)) {
+    return { status: "invalid" };
+  }
+  const player = data.p;
+  const updatedAt = num(data.u);
+  const local = loadScore(player);
+  // Din egen spiller på denne enhed har den fulde historik (bruges til at
+  // huske, hvilke spørgsmål der allerede har givet point) – den overskrives ikke.
+  if (player === loadPlayer() && local.history.length > 0) {
+    return { status: "own", player };
+  }
+  if (updatedAt <= local.updatedAt) {
+    return { status: "older", player };
+  }
+
+  const perCategoryScores: Partial<Record<Category, number>> = {};
+  CATEGORIES.forEach((category, index) => {
+    const value = num(data.c?.[index]);
+    if (value !== 0) perCategoryScores[category] = value;
+  });
+
+  const imported: Score = {
+    totalScore: num(data.s),
+    perCategoryScores,
+    history: [], // historikken er for lang til et link – tællerne er nok til stillingen
+    correctCount: Math.max(0, num(data.r)),
+    answeredCount: Math.max(0, num(data.a)),
+    weekKey: typeof data.w === "string" ? data.w : getWeekKey(),
+    updatedAt,
+  };
+  saveScore(player, imported);
+  return { status: "imported", player, totalScore: imported.totalScore };
+}
+
+// ---------------------------------------------------------------------------
+// Fælles stilling via databasen (kun på Vercel – se app/api/scores/route.ts)
+// ---------------------------------------------------------------------------
+
+const SCORES_URL = `${BASE_PATH}/api/scores`;
+
+/** Sender en spillers score til den fælles stilling. Fejl ignoreres. */
+export async function pushScore(player: Player, score: Score): Promise<void> {
+  if (typeof window === "undefined" || score.updatedAt === 0) return;
+  try {
+    await fetch(SCORES_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(toPayload(player, score)),
+    });
+  } catch {
+    // offline eller ingen database: scoren ligger stadig på telefonen
+  }
+}
+
+/**
+ * Sender egen score og henter de andres. Har en anden i gruppen nulstillet,
+ * nulstilles der også her. Returnerer false, hvis der ikke er en fælles
+ * stilling (fx på GitHub Pages eller uden net).
+ */
+export async function syncScores(): Promise<boolean> {
+  if (typeof window === "undefined") return false;
+  const player = loadPlayer();
+  try {
+    const response = await fetch(SCORES_URL, { cache: "no-store" });
+    if (!response.ok) return false;
+    const data = (await response.json()) as {
+      scores?: Record<string, Partial<SharePayload>>;
+      resetAt?: number;
+    };
+
+    const resetAt = num(data.resetAt);
+    if (resetAt > num(Number(read(LAST_RESET_KEY)))) {
+      resetAllScores(resetAt);
+      write(LAST_RESET_KEY, String(resetAt));
+    }
+    for (const payload of Object.values(data.scores ?? {})) {
+      if (num(payload?.u) > resetAt) importPayload(payload);
+    }
+    if (player) await pushScore(player, loadScore(player));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+/** Nulstiller for hele gruppen. Returnerer false, hvis databasen ikke kunne nås. */
+export async function resetSharedScores(): Promise<boolean> {
+  try {
+    const response = await fetch(SCORES_URL, { method: "DELETE" });
+    if (!response.ok) return false;
+    const data = (await response.json()) as { resetAt?: number };
+    write(LAST_RESET_KEY, String(num(data.resetAt, Date.now())));
+    return true;
+  } catch {
+    return false;
   }
 }

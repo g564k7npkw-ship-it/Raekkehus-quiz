@@ -20,6 +20,7 @@ import {
   loadAllScores,
   loadPlayer,
   loadScore,
+  syncScores,
   recordAnswer,
   recordHint,
   type AllScores,
@@ -76,8 +77,13 @@ function QuizFlow() {
     setRoundPoints(0);
 
     try {
-      const response = await fetch(`${BASE_PATH}/api/questions`);
+      // Hent også den fælles stilling, så en nulstilling i gruppen er med.
+      const [response] = await Promise.all([
+        fetch(`${BASE_PATH}/api/questions`),
+        syncScores(),
+      ]);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      setScores(loadAllScores());
       const data = (await response.json()) as { questions: Question[] };
       const inCategory =
         category === ALL_CATEGORIES
