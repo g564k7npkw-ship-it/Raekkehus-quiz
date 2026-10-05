@@ -1,0 +1,1204 @@
+[
+  {
+    "id": "myn-01",
+    "category": "Myndighedsfasen",
+    "type": "paragraph",
+    "questionText": "Hvilken paragraf i BR18 fastlægger, hvad en ansøgning om byggetilladelse skal indeholde?",
+    "options": [
+      "BR18 § 10",
+      "BR18 § 40",
+      "BR18 § 43",
+      "BR18 § 493"
+    ],
+    "correctAnswer": "BR18 § 10",
+    "explanation": "§ 10 lister indholdet: identifikation af ejendommen, tegningsmateriale, byggeretsforhold (kap. 8), planlagt benyttelse, konstruktionsklasse, brandklasse, indsatsforhold og BBR-oplysninger. § 40 handler om færdigmelding og § 43 om ibrugtagning.",
+    "reference": "BR18 § 10",
+    "hint": "Den ligger i kapitel 1 om administrative bestemmelser – før reglerne om færdigmelding."
+  },
+  {
+    "id": "myn-02",
+    "category": "Myndighedsfasen",
+    "type": "mcq",
+    "questionText": "Hvad omfatter rådgivningen i myndighedsprojektet ifølge YBL 2018?",
+    "options": [
+      "Fagtilsyn og byggeledelse på byggepladsen under udførelsen",
+      "Indhentning og vurdering af tilbud fra de bydende entreprenører",
+      "Ansøgning om byggetilladelse og samling af det nødvendige grundlag for den",
+      "Arbejdsbeskrivelser og tilbudslister til de enkelte fagentrepriser"
+    ],
+    "correctAnswer": "Ansøgning om byggetilladelse og samling af det nødvendige grundlag for den",
+    "explanation": "Myndighedsprojektet har fokus på at dokumentere de forhold, BR18 stiller krav til: bærende konstruktioner, brand, energi, installationer mv. Tilbudslister og arbejdsbeskrivelser hører til udbudsprojektet.",
+    "reference": "YBL 2018, kap. 4 Myndighedsprojekt",
+    "hint": "Tænk på, hvem modtageren af fasens materiale er: kommunen."
+  },
+  {
+    "id": "myn-03",
+    "category": "Myndighedsfasen",
+    "type": "mcq",
+    "questionText": "Bygherre kræver, at klyngen kan brandprojekteres med BR18's standardløsninger uden certificeret brandrådgiver. Hvilken arealgrænse styrer derfor klyngens størrelse?",
+    "options": [
+      "Højst 150 m² samlet etageareal",
+      "Højst 600 m² samlet etageareal",
+      "Højst 1.000 m² samlet etageareal",
+      "Højst 1.200 m² samlet etageareal"
+    ],
+    "correctAnswer": "Højst 600 m² samlet etageareal",
+    "explanation": "Brandklasse 1 forudsætter risikoklasse 1, præ-accepterede løsninger og højst 600 m² etageareal. Bliver klyngen større, havner den i brandklasse 2, og så skal der tilknyttes certificeret brandrådgiver.",
+    "reference": "BR18 § 493 og § 23; Projekt: Opgavetekst E26",
+    "hint": "Vores blok ligger lige under grænsen med ca. 598 m²."
+  },
+  {
+    "id": "myn-04",
+    "category": "Myndighedsfasen",
+    "type": "mcq",
+    "questionText": "Lokalplan 478 § 7.2 kræver træfacader i delområde 1, men bygherre vil have mursten i stueetagen. Hvad er den korrekte fremgangsmåde?",
+    "options": [
+      "Bygge med mursten og oplyse det ved færdigmeldingen",
+      "Lade den certificerede brandrådgiver godkende afvigelsen",
+      "Indarbejde afvigelsen i udbudsmaterialet, så entreprenøren tager ansvaret",
+      "Søge kommunen om dispensation fra lokalplanen efter planlovens § 19"
+    ],
+    "correctAnswer": "Søge kommunen om dispensation fra lokalplanen efter planlovens § 19",
+    "explanation": "En lokalplan er bindende. Afvigelser kræver dispensation fra kommunen, og den kan kun gives, hvis den ikke er i strid med planens principper. Vi har søgt dispensation for muret stueetage med træ på 1. sal.",
+    "reference": "Planloven § 19, stk. 1; Projekt: Dispensationsansøgning facade (Lokalplan 478 § 7.2)",
+    "hint": "Lokalplanen kan kun fraviges af den myndighed, der har vedtaget den."
+  },
+  {
+    "id": "myn-05",
+    "category": "Myndighedsfasen",
+    "type": "true_false",
+    "questionText": "Kommunen kan give dispensation fra en lokalplan, selv om dispensationen er i strid med planens principper.",
+    "correctAnswer": "Falsk",
+    "explanation": "Dispensation forudsætter, at den ikke er i strid med planens principper (typisk formål og anvendelse). Videregående afvigelser kræver en ny lokalplan. Derfor argumenterer vores ansøgning for, at et facademateriale ikke rører ved principperne.",
+    "reference": "Planloven § 19, stk. 1 og 2",
+    "hint": "Tænk på forskellen mellem en mindre afvigelse og en ændring af planens formål."
+  },
+  {
+    "id": "myn-06",
+    "category": "Myndighedsfasen",
+    "type": "mcq",
+    "questionText": "Hvad skal sendes til kommunen ved færdigmelding af rækkehusene?",
+    "options": [
+      "Afleveringsprotokollen fra AB 18-afleveringen og entreprenørernes mangellister",
+      "Erklæring om overensstemmelse med byggetilladelsen, dokumentation for BR18-kravene og D&V-manual",
+      "En ny ansøgning om byggetilladelse med de endelige tegninger og beregninger",
+      "Entrepriseaftalerne, de vindende tilbudslister og den endelige byggesagsøkonomi"
+    ],
+    "correctAnswer": "Erklæring om overensstemmelse med byggetilladelsen, dokumentation for BR18-kravene og D&V-manual",
+    "explanation": "Ved færdigmelding fremsendes også dokumentation for byggeskadeforsikring, når byggeriet er omfattet af byggelovens § 25 A. Aflevering efter AB 18 er et forhold mellem bygherre og entreprenør – ikke myndigheden.",
+    "reference": "BR18 § 40, stk. 2",
+    "hint": "Kommunen skal kunne se, at det færdige byggeri lever op til BR18."
+  },
+  {
+    "id": "myn-07",
+    "category": "Myndighedsfasen",
+    "type": "true_false",
+    "questionText": "Rækkehusene må tages i brug, så snart byggeriet er færdigmeldt – en ibrugtagningstilladelse er ikke nødvendig.",
+    "correctAnswer": "Falsk",
+    "explanation": "Byggearbejder, der kræver byggetilladelse, må ikke tages i brug uden kommunens ibrugtagningstilladelse. Kommunen kontrollerer først, at den krævede dokumentation er indsendt.",
+    "reference": "BR18 § 43",
+    "hint": "Færdigmelding og ibrugtagning er to forskellige trin."
+  },
+  {
+    "id": "myn-08",
+    "category": "Myndighedsfasen",
+    "type": "mcq",
+    "questionText": "Hvor længe gælder en byggetilladelse, hvis byggearbejdet ikke bliver påbegyndt?",
+    "options": [
+      "6 måneder",
+      "1 år",
+      "3 år",
+      "5 år"
+    ],
+    "correctAnswer": "1 år",
+    "explanation": "Tilladelsen bortfalder, hvis arbejdet ikke er påbegyndt inden 1 år fra tilladelsens dato. Det har betydning for, hvornår i tidsplanen byggeansøgningen bør sendes.",
+    "reference": "Byggeloven § 16, stk. 10",
+    "hint": "Fristen står i byggeloven, ikke i BR18."
+  },
+  {
+    "id": "pro-01",
+    "category": "Projekteringsfasen",
+    "type": "mcq",
+    "questionText": "Hvilken rækkefølge har projekteringsfaserne i YBL 2018?",
+    "options": [
+      "Byggeprogram – udbudsprojekt – projektforslag – myndighedsprojekt – udførelsesprojekt",
+      "Dispositionsforslag – myndighedsprojekt – projektforslag – udførelsesprojekt – udbudsprojekt",
+      "Dispositionsforslag – projektforslag – myndighedsprojekt – udbudsprojekt – udførelsesprojekt",
+      "Projektforslag – dispositionsforslag – udbudsprojekt – myndighedsprojekt – udførelsesprojekt"
+    ],
+    "correctAnswer": "Dispositionsforslag – projektforslag – myndighedsprojekt – udbudsprojekt – udførelsesprojekt",
+    "explanation": "Vi fik dispositionsforslaget udleveret og startede i projektforslaget. Derefter følger myndighedsprojektet og til sidst det individuelle udbudsprojekt.",
+    "reference": "YBL 2018, kap. 3–6; Projekt: Opgavetekst E26",
+    "hint": "Forslagsfasen har to trin, og byggetilladelsen søges, før der udbydes."
+  },
+  {
+    "id": "pro-02",
+    "category": "Projekteringsfasen",
+    "type": "mcq",
+    "questionText": "Hvad kendetegner et projektforslag efter YBL 2018?",
+    "options": [
+      "Det er et første motiveret forslag på grundlag af byggeprogrammet",
+      "Alle de for projektet afgørende beslutninger er truffet og indgår i forslaget",
+      "Projektet er detaljeret, så entreprenørerne kan bygge direkte efter det",
+      "Det indeholder udbudsbrev, tilbudslister og udkast til entrepriseaftale"
+    ],
+    "correctAnswer": "Alle de for projektet afgørende beslutninger er truffet og indgår i forslaget",
+    "explanation": "Projektforslaget er en bearbejdelse af det godkendte dispositionsforslag og er bygherrens beslutningsgrundlag for æstetik, funktion, teknik og økonomi. Derfor skal byggesystem, materialer og normalkonstruktioner være valgt og begrundet.",
+    "reference": "YBL 2018, afsnit 3.2 og 3.2.1",
+    "hint": "Det er bygherrens beslutningsgrundlag – ikke entreprenørens arbejdsgrundlag."
+  },
+  {
+    "id": "pro-03",
+    "category": "Projekteringsfasen",
+    "type": "true_false",
+    "questionText": "I projektforslagsfasen skal rådgiveren deltage i en tværfaglig projektgranskning og dokumentere den inden for eget ansvarsområde.",
+    "correctAnswer": "Sandt",
+    "explanation": "Granskningen skal sikre, at projektforslaget kan danne grundlag for den videre projektering og stemmer med dispositionsforslaget og bygherrens krav. Ved digital projektering indgår kollisions- og konsistenskontrol af modellerne.",
+    "reference": "YBL 2018, afsnit 3.2.6 Kvalitetssikring",
+    "hint": "Tænk på bygherremøderne, hvor fagene gennemgås på tværs."
+  },
+  {
+    "id": "pro-04",
+    "category": "Projekteringsfasen",
+    "type": "mcq",
+    "questionText": "Hvem koordinerer de projekterendes indsats på tværs af arkitekt, konstruktion og installationer?",
+    "options": [
+      "Byggelederen",
+      "Kommunens byggesagsbehandler",
+      "Projekteringslederen",
+      "Bygherren"
+    ],
+    "correctAnswer": "Projekteringslederen",
+    "explanation": "Rådgivernes indsats koordineres under projekteringslederens ledelse, bl.a. på projekteringsmøderne. Byggelederen kommer først ind i udførelsesfasen.",
+    "reference": "YBL 2018, kap. 2.1 og kap. 3",
+    "hint": "Rollen hører til projekteringen, ikke udførelsen."
+  },
+  {
+    "id": "pro-05",
+    "category": "Projekteringsfasen",
+    "type": "mcq",
+    "questionText": "Hvad betyder statuskoden KONF i vores kravlister?",
+    "options": [
+      "Kravet er opfyldt og dokumenteret",
+      "Kravet er ikke relevant for bygningsdelen",
+      "Forholdet er uafklaret, fordi der mangler dokumentation",
+      "En konflikt, der kræver en beslutning – typisk hos bygherre"
+    ],
+    "correctAnswer": "En konflikt, der kræver en beslutning – typisk hos bygherre",
+    "explanation": "OK = opfyldt, UAFK = uafklaret/mangler dokumentation, KONF = konflikt der kræver beslutning, IR = ikke relevant. Eksempel på KONF: bygherres ønske om mursten over for lokalplanens krav om træfacader.",
+    "reference": "Projekt: C08.01 Kravliste ED1 (statuskoder)",
+    "hint": "Koden bruges, når to krav ikke kan opfyldes på samme tid."
+  },
+  {
+    "id": "pro-06",
+    "category": "Projekteringsfasen",
+    "type": "mcq",
+    "questionText": "Hvilket aftalegrundlag gælder mellem bygherre og os som totalrådgiver?",
+    "options": [
+      "ABR 18",
+      "AB 18",
+      "ABT 18",
+      "YBL 2018"
+    ],
+    "correctAnswer": "ABR 18",
+    "explanation": "ABR 18 er aftalevilkårene for rådgivning. AB 18 gælder entrepriser og ABT 18 totalentrepriser. YBL 2018 beskriver ydelserne i faserne, men er ikke i sig selv aftalevilkår.",
+    "reference": "ABR 18; Projekt: Referat bygherremøde 1",
+    "hint": "R'et står for rådgivning."
+  },
+  {
+    "id": "pro-07",
+    "category": "Projekteringsfasen",
+    "type": "mcq",
+    "questionText": "I hvilket mål udarbejdes situationsplanen i projektforslaget?",
+    "options": [
+      "1:200 eller 1:500",
+      "1:5 eller 1:10",
+      "1:20",
+      "1:50"
+    ],
+    "correctAnswer": "1:200 eller 1:500",
+    "explanation": "Planer, snit og facader tegnes i 1:100/1:200, facadesnit i 1:50, og normalkonstruktioner og knudepunkter skitseres i 1:5/1:10.",
+    "reference": "YBL 2018, afsnit 3.2.7 (tilrettet 2. semester); Projekt: Opgavetekst E26",
+    "hint": "Hele grunden og naboforholdene skal kunne være på arket."
+  },
+  {
+    "id": "udb-01",
+    "category": "Udbudsfasen",
+    "type": "mcq",
+    "questionText": "Hvor længe er en entreprenør bundet af sit tilbud efter AB 18?",
+    "options": [
+      "10 arbejdsdage",
+      "20 arbejdsdage",
+      "40 arbejdsdage",
+      "3 måneder"
+    ],
+    "correctAnswer": "20 arbejdsdage",
+    "explanation": "Vedståelsesfristen er 20 arbejdsdage fra tilbuddets datering – eller fra udbudsfristens udløb, når flere har fået udbudsmaterialet.",
+    "reference": "AB 18 § 5",
+    "hint": "Fristen regnes i arbejdsdage og er kortere end to måneder."
+  },
+  {
+    "id": "udb-02",
+    "category": "Udbudsfasen",
+    "type": "mcq",
+    "questionText": "Hvor stor sikkerhed skal entreprenøren stille indtil afleveringen efter AB 18?",
+    "options": [
+      "2 % af entreprisesummen",
+      "5 % af entreprisesummen",
+      "10 % af entreprisesummen",
+      "15 % af entreprisesummen"
+    ],
+    "correctAnswer": "15 % af entreprisesummen",
+    "explanation": "Sikkerheden er 15 % indtil aflevering, nedskrives til 10 % ved aflevering og til 2 % et år efter. Den ophører 5 år efter afleveringen.",
+    "reference": "AB 18 § 9",
+    "hint": "Det er den højeste af de procentsatser, AB 18 bruger om sikkerhed."
+  },
+  {
+    "id": "udb-03",
+    "category": "Udbudsfasen",
+    "type": "paragraph",
+    "questionText": "Hvilken bestemmelse i AB 18 fastlægger rangordenen mellem aftaledokumenterne, hvis de strider mod hinanden?",
+    "options": [
+      "AB 18 § 4",
+      "AB 18 § 6",
+      "AB 18 § 9",
+      "AB 18 § 55"
+    ],
+    "correctAnswer": "AB 18 § 6",
+    "explanation": "Rækkefølgen er: entrepriseaftalen, ændringer aftalt efter tilbuddet, tilbuddet, ændringer aftalt efter udbuddet, bygherrens udbudsmateriale og til sidst AB 18. § 4 handler om udbuddet, § 9 om sikkerhed og § 55 om mangelansvarets ophør.",
+    "reference": "AB 18 § 6",
+    "hint": "Den står tidligt i AB 18, lige efter reglerne om udbud og tilbud."
+  },
+  {
+    "id": "udb-04",
+    "category": "Udbudsfasen",
+    "type": "mcq",
+    "questionText": "Projektet udbydes i fagentrepriser. Hvad betyder det for bygherre?",
+    "options": [
+      "Rådgiveren indgår kontrakterne og hæfter for entreprenørernes arbejde over for bygherre",
+      "Bygherre har kontrakt med hver fagentreprenør og står selv for koordinering og byggeledelse",
+      "Én hovedentreprenør har kontrakten med bygherre og koordinerer alle underentreprenører",
+      "Én totalentreprenør står for både projektering og udførelse af hele byggeriet"
+    ],
+    "correctAnswer": "Bygherre har kontrakt med hver fagentreprenør og står selv for koordinering og byggeledelse",
+    "explanation": "Fagentreprise giver mange kontrakter og grænseflader. Derfor skal udbudsmaterialet afgrænse hver entreprise præcist, og byggeledelsen ligger hos bygherre eller dennes rådgiver.",
+    "reference": "AB 18; Projekt: Opgavetekst E26",
+    "hint": "Tæl kontrakterne: én pr. fag."
+  },
+  {
+    "id": "udb-05",
+    "category": "Udbudsfasen",
+    "type": "true_false",
+    "questionText": "Efter AB 18 skal bygherrens krav om mangler fremsættes senest 5 år efter arbejdets aflevering.",
+    "correctAnswer": "Sandt",
+    "explanation": "Mangelansvaret ophører som udgangspunkt 5 år efter afleveringen. Derfor holdes der 5-års eftersyn kort før fristens udløb.",
+    "reference": "AB 18 § 55",
+    "hint": "Tænk på, hvornår det sidste eftersyn holdes."
+  },
+  {
+    "id": "udb-06",
+    "category": "Udbudsfasen",
+    "type": "mcq",
+    "questionText": "Hvornår skal projektgennemgangen efter AB 18 finde sted?",
+    "options": [
+      "Ved afleveringsforretningen",
+      "Ved 1-års eftersynet",
+      "Inden udførelsen af arbejdet påbegyndes",
+      "Inden udbudsmaterialet sendes ud"
+    ],
+    "correctAnswer": "Inden udførelsen af arbejdet påbegyndes",
+    "explanation": "Bygherre, rådgiver og entreprenør gennemgår projektet sammen for at få en fælles forståelse af projekt, grænseflader og tidsfølge og for at afdække risici og uklarheder.",
+    "reference": "AB 18 § 19",
+    "hint": "Entreprenøren er med, så kontrakten er indgået – men ingen er gået i gang."
+  },
+  {
+    "id": "udb-07",
+    "category": "Udbudsfasen",
+    "type": "true_false",
+    "questionText": "Et udbudsprojekt detaljeres normalt som et udførelsesprojekt, medmindre der udbydes som funktionsudbud.",
+    "correctAnswer": "Sandt",
+    "explanation": "Udbudsprojektet danner sammen med udbuds- og kontraktbetingelserne grundlag for entrepriseudbuddet. Ved funktionsudbud beskrives krav og funktion, og entreprenøren projekterer løsningen.",
+    "reference": "YBL 2018, definitioner (udbudsprojekt)",
+    "hint": "Entreprenøren skal kunne give en fast pris på det, der er tegnet og beskrevet."
+  },
+  {
+    "id": "udb-08",
+    "category": "Udbudsfasen",
+    "type": "mcq",
+    "questionText": "En tilbudsgiver finder en uoverensstemmelse mellem tegning og beskrivelse i tilbudsfasen. Hvad er korrekt håndtering?",
+    "options": [
+      "Rådgiveren ringer til tilbudsgiveren og forklarer, hvad der er ment med tegningen",
+      "Uoverensstemmelsen rettes først efter kontraktindgåelse som en aftalt ekstraydelse",
+      "Tilbudsgiveren vælger selv den billigste tolkning og tager forbehold i sit tilbud",
+      "Spørgsmålet besvares skriftligt, og svaret sendes som rettelsesblad til alle tilbudsgivere"
+    ],
+    "correctAnswer": "Spørgsmålet besvares skriftligt, og svaret sendes som rettelsesblad til alle tilbudsgivere",
+    "explanation": "Alle tilbudsgivere skal have samme oplysninger, så de byder på samme grundlag. Mundtlige svar til én tilbudsgiver giver forskelsbehandling og tilbud, der ikke kan sammenlignes.",
+    "reference": "Tilbudsloven § 2, stk. 3 (ligebehandling); udbudsbetingelser",
+    "hint": "Hvad en tilbudsgiver ved, skal alle vide."
+  },
+  {
+    "id": "bra-01",
+    "category": "Brand",
+    "type": "mcq",
+    "questionText": "Hvilket brandkrav gælder for lejlighedsskellet (LS1) mellem to rækkehuse?",
+    "options": [
+      "REI 120 A2-s1,d0, ført mindst 0,3 m op over tagfladen som brandkam",
+      "EI 60 uden åbninger, ført tæt til undersiden af den yderste tagdækning",
+      "R 30 uden åbninger, ført til undersiden af loftbeklædningen på 1. sal",
+      "EI 30 med selvlukkende branddør mellem de to boliger i stueetagen"
+    ],
+    "correctAnswer": "EI 60 uden åbninger, ført tæt til undersiden af den yderste tagdækning",
+    "explanation": "Hver bolig er sin egen brandmæssige enhed. Skellet skal være integritets- og isolationsbevarende i 60 minutter, og branden må heller ikke kunne løbe uden om skellet via tagudhæng eller facade.",
+    "reference": "BR18 Bilag 1a, afsnit 4.6.1",
+    "hint": "Kravet er på 60 minutter og handler om adskillelse, ikke kun bæreevne."
+  },
+  {
+    "id": "bra-02",
+    "category": "Brand",
+    "type": "mcq",
+    "questionText": "Hvilken brandmodstandsevne skal etageadskillelsen ED1 mellem stue og 1. sal i samme bolig mindst have?",
+    "options": [
+      "Ingen krav",
+      "EI 60",
+      "REI 60 A2-s1,d0",
+      "R 30"
+    ],
+    "correctAnswer": "R 30",
+    "explanation": "ED1 ligger inden for én brandcelle, så kravet gælder kun bæreevnen (R) – ikke integritet og isolation (E og I). Løsningen med 2 lag gips på undersiden skal dokumenteres for det valgte bjælkelag.",
+    "reference": "BR18 Bilag 1a, afsnit 3; Projekt: C08.01 Kravliste ED1",
+    "hint": "Begge etager hører til samme bolig, så der skal ikke adskilles – kun bæres."
+  },
+  {
+    "id": "bra-03",
+    "category": "Brand",
+    "type": "paragraph",
+    "questionText": "Hvilken paragraf i BR18 definerer brandklasserne BK1–BK4?",
+    "options": [
+      "BR18 § 86",
+      "BR18 § 259",
+      "BR18 § 489",
+      "BR18 § 493"
+    ],
+    "correctAnswer": "BR18 § 493",
+    "explanation": "§ 493 definerer brandklasserne. § 86 handler om risikoklasser, § 489 om konstruktionsklasser og § 259 om energirammen for boliger.",
+    "reference": "BR18 § 493",
+    "hint": "Brandklasserne står i kapitel 27, lige efter konstruktionsklasserne i kapitel 26."
+  },
+  {
+    "id": "bra-04",
+    "category": "Brand",
+    "type": "mcq",
+    "questionText": "Hvad kræves der af røgalarmanlægget i hver bolig?",
+    "options": [
+      "Ingen krav, fordi boliger i brandklasse 1 er undtaget fra reglerne om varsling",
+      "Automatisk brandalarmanlæg med direkte overførsel til redningsberedskabet",
+      "Netforsynede alarmer med batteribackup, mindst én pr. etage og indbyrdes sammenkoblede",
+      "Én batteridrevet røgalarm i entréen, som beboeren selv tester en gang om året"
+    ],
+    "correctAnswer": "Netforsynede alarmer med batteribackup, mindst én pr. etage og indbyrdes sammenkoblede",
+    "explanation": "Boligenheder i anvendelseskategori 4 skal have røgalarmanlæg. Den præ-accepterede løsning er netforsynede alarmer med batteribackup, højst 10 m ganglængde til nærmeste alarm og mindst én pr. etage.",
+    "reference": "BR18 § 93, stk. 1, nr. 4; Bilag 1a, afsnit 2.1",
+    "hint": "Boligen har tre plan – alarmen skal kunne høres fra dem alle."
+  },
+  {
+    "id": "bra-05",
+    "category": "Brand",
+    "type": "mcq",
+    "questionText": "Facadeisoleringen løber langs hele klyngen og krydser lejlighedsskellets plan. Hvad er den korrekte løsning?",
+    "options": [
+      "Isoleringen føres ubrudt forbi skellet af hensyn til kuldebroen",
+      "Facadebeklædningen udføres dobbelt ud for skellet",
+      "Isoleringen brydes i skellets plan med et brandstop i ubrændbart materiale",
+      "Der monteres en ekstra dampspærre ved skellet"
+    ],
+    "correctAnswer": "Isoleringen brydes i skellets plan med et brandstop i ubrændbart materiale",
+    "explanation": "En brand må ikke kunne sprede sig uden om den brandadskillende væg via hulrum eller brændbar isolering i facaden. Brandstoppet opretholder lejlighedsskellets EI 60-funktion helt ud til facadebeklædningen.",
+    "reference": "BR18 § 115; Projekt: C04.04 A-konstruktionsdokumentation",
+    "hint": "Branden må ikke kunne løbe uden om lejlighedsskellet."
+  },
+  {
+    "id": "bra-06",
+    "category": "Brand",
+    "type": "mcq",
+    "questionText": "Installationsskakten går fra kælder til 1. sal. Hvilken løsning har vi valgt for at blive inden for de præ-accepterede løsninger?",
+    "options": [
+      "Skakten står åben i hele højden og ventileres over tag",
+      "Skakten placeres i lejlighedsskellet, så den deles af to boliger",
+      "Skakten sprinkles",
+      "Skakten lukkes ved hver etageadskillelse, og rørgennemføringerne brandtætnes"
+    ],
+    "correctAnswer": "Skakten lukkes ved hver etageadskillelse, og rørgennemføringerne brandtætnes",
+    "explanation": "En ubrudt skakt er en lodret brand- og røgspredningsvej. Gennemføringer i brandadskillende bygningsdele må ikke forringe deres brandtekniske egenskaber – og ved kælderdækket (REI 60) er lukningen under alle omstændigheder nødvendig.",
+    "reference": "BR18 § 114; Projekt: C07 Installationsnotat N01",
+    "hint": "Etageadskillelsens brandmodstand skal være den samme, også hvor rørene går igennem."
+  },
+  {
+    "id": "bra-07",
+    "category": "Brand",
+    "type": "mcq",
+    "questionText": "Hvilken anvendelseskategori hører rækkehusene til?",
+    "options": [
+      "Anvendelseskategori 1",
+      "Anvendelseskategori 3",
+      "Anvendelseskategori 4",
+      "Anvendelseskategori 6"
+    ],
+    "correctAnswer": "Anvendelseskategori 4",
+    "explanation": "Kategori 4 er bygningsafsnit med sovepladser, hvor personerne kender flugtvejene og kan bringe sig selv i sikkerhed – altså boliger. Sammen med risikoklasse 1 giver det adgang til brandklasse 1.",
+    "reference": "BR18 § 84–85 og Bilag 1, tabel 1",
+    "hint": "Der soves i bygningen, og beboerne kender deres eget hus."
+  },
+  {
+    "id": "bra-08",
+    "category": "Brand",
+    "type": "true_false",
+    "questionText": "Brandklasse 1 forudsætter, at brandsikkerheden dokumenteres med præ-accepterede løsninger.",
+    "correctAnswer": "Sandt",
+    "explanation": "Brandklasse 1 dækker byggeri i risikoklasse 1 med simple, traditionelle forhold, hvor man holder sig til de præ-accepterede løsninger i vejledningen til kapitel 5. Brandteknisk dimensionering hører til højere brandklasser.",
+    "reference": "BR18 § 492–493",
+    "hint": "Bygherre har netop krævet standardløsninger."
+  },
+  {
+    "id": "sta-01",
+    "category": "Statik",
+    "type": "mcq",
+    "questionText": "Hvilken konsekvensklasse er vores bygværk indplaceret i?",
+    "options": [
+      "CC2 (middel)",
+      "CC1 (lav)",
+      "CC3 (høj)",
+      "CC4 (meget høj)"
+    ],
+    "correctAnswer": "CC2 (middel)",
+    "explanation": "Boligbyggeri i to etager med kælder giver middel konsekvens for menneskeliv og middelstore økonomiske konsekvenser ved svigt. Det svarer til CC2 med faktoren K_FI = 1,0.",
+    "reference": "DS/EN 1990 DK NA; Projekt: C04.04 A-konstruktionsdokumentation",
+    "hint": "Almindeligt boligbyggeri ligger i den midterste klasse."
+  },
+  {
+    "id": "sta-02",
+    "category": "Statik",
+    "type": "mcq",
+    "questionText": "Hvorfor kan rækkehusene indplaceres i konstruktionsklasse 1 (KK1), selv om de er i CC2?",
+    "options": [
+      "CC2-rækkehuse med højst 2 etager over terræn og højst 1 kælderetage hører til KK1",
+      "Bygherre er privat, og private byggerier kan frit vælge konstruktionsklasse",
+      "Alle bygninger med bærende konstruktioner i træ hører automatisk til KK1",
+      "Klyngen er under 600 m², og så gælder KK1 uanset antallet af etager"
+    ],
+    "correctAnswer": "CC2-rækkehuse med højst 2 etager over terræn og højst 1 kælderetage hører til KK1",
+    "explanation": "KK1 omfatter CC1-konstruktioner og CC2-konstruktioner i enfamiliehuse, rækkehuse og sommerhuse inden for de etagegrænser. 600 m² er grænsen for brandklasse 1 – ikke for konstruktionsklassen.",
+    "reference": "BR18 § 489",
+    "hint": "Det afgørende er bygningstypen og antallet af etager."
+  },
+  {
+    "id": "sta-03",
+    "category": "Statik",
+    "type": "true_false",
+    "questionText": "Fordi byggeriet er i KK1, skal der tilknyttes en certificeret statiker, som udarbejder start- og sluterklæring.",
+    "correctAnswer": "Falsk",
+    "explanation": "Certificeret statiker og start-/sluterklæring kræves i konstruktionsklasse 2–4. I KK1 skal der stadig udarbejdes statisk dokumentation efter Eurocodes, men uden certificeret statiker.",
+    "reference": "BR18 § 16 og § 496",
+    "hint": "KK1 er den laveste klasse med de mindste dokumentationskrav."
+  },
+  {
+    "id": "sta-04",
+    "category": "Statik",
+    "type": "mcq",
+    "questionText": "Hvordan optages vandret last vinkelret på facaderne i vores byggesystem?",
+    "options": [
+      "Stålkryds i gavlene fører lasten til fundamentet uden om dækskiverne",
+      "Dæk- og tagskiven fører lasten til lejlighedsskellene, der virker som lodrette skiver",
+      "Momentstive rammer i facaderne fører lasten direkte ned i kældervæggene",
+      "Kældervæggene optager lasten alene, fordi træet regnes uden stivhed"
+    ],
+    "correctAnswer": "Dæk- og tagskiven fører lasten til lejlighedsskellene, der virker som lodrette skiver",
+    "explanation": "Bygværket er et plade/skive-system uden momentstive rammer. Lejlighedsskellene LS1 stabiliserer på tværs af rækken, og facaderne YV1/YV2 stabiliserer på langs.",
+    "reference": "Projekt: C04.04 A-konstruktionsdokumentation, A1.1.4; C05.01 Statisk redegørelse",
+    "hint": "Find de vægge, der står vinkelret på facaden."
+  },
+  {
+    "id": "sta-05",
+    "category": "Statik",
+    "type": "mcq",
+    "questionText": "Hvilken karakteristisk nyttelast regnes der med på gulve i boliger (kategori A)?",
+    "options": [
+      "0,5 kN/m²",
+      "1,5 kN/m²",
+      "2,5 kN/m²",
+      "5,0 kN/m²"
+    ],
+    "correctAnswer": "1,5 kN/m²",
+    "explanation": "Kategori A dækker boliger: 1,5 kN/m² på gulve, 2,5 kN/m² på altaner og 3,0 kN/m² på trapper. De 0,5 kN/m² er vores tillæg for lette skillevægge.",
+    "reference": "DS/EN 1991-1-1 DK NA; Projekt: C04.04 A-konstruktionsdokumentation",
+    "hint": "Altanen og trappen har højere værdier end stuegulvet."
+  },
+  {
+    "id": "sta-06",
+    "category": "Statik",
+    "type": "mcq",
+    "questionText": "Hvad bliver den karakteristiske snelast på taget, når s_k = 1,0 kN/m², formfaktoren μ = 0,8 og C_e = C_t = 1,0?",
+    "options": [
+      "0,5 kN/m²",
+      "0,8 kN/m²",
+      "1,0 kN/m²",
+      "1,25 kN/m²"
+    ],
+    "correctAnswer": "0,8 kN/m²",
+    "explanation": "s = μ · C_e · C_t · s_k = 0,8 · 1,0 · 1,0 · 1,0 = 0,8 kN/m². Terrænværdien 1,0 kN/m² gælder hele Danmark, og μ = 0,8 gælder for taghældninger op til 30°.",
+    "reference": "DS/EN 1991-1-3 DK NA",
+    "hint": "Faktorerne ganges sammen."
+  },
+  {
+    "id": "sta-07",
+    "category": "Statik",
+    "type": "mcq",
+    "questionText": "Hvilken anvisning fastlægger opbygningen af den statiske dokumentation (A1 konstruktionsgrundlag, A2 statiske beregninger, A3 tegninger osv.)?",
+    "options": [
+      "SBi-anvisning 213",
+      "SBi-anvisning 224",
+      "SBi-anvisning 252",
+      "SBi-anvisning 271"
+    ],
+    "correctAnswer": "SBi-anvisning 271",
+    "explanation": "BR18 kræver, at den statiske dokumentation udarbejdes efter principperne i SBi-anvisning 271. SBi 213 handler om energibehov, 224 om fugt og 252 om vådrum.",
+    "reference": "BR18 § 500; SBi-anvisning 271",
+    "hint": "Anvisningen afløste den tidligere SBi-anvisning 223."
+  },
+  {
+    "id": "sta-08",
+    "category": "Statik",
+    "type": "paragraph",
+    "questionText": "Hvilken standard dimensioneres de bærende trækonstruktioner (CLT og C24) efter?",
+    "options": [
+      "DS/EN 1992-1-1 (Eurocode 2)",
+      "DS/EN 1993-1-1 (Eurocode 3)",
+      "DS/EN 1995-1-1 (Eurocode 5)",
+      "DS/EN 1996-1-1 (Eurocode 6)"
+    ],
+    "correctAnswer": "DS/EN 1995-1-1 (Eurocode 5)",
+    "explanation": "Eurocode 5 gælder trækonstruktioner, og del 1-2 dækker brand. Eurocode 2 er beton (vores kælder og fundamenter), Eurocode 3 er stål og Eurocode 6 er murværk.",
+    "reference": "DS/EN 1995-1-1 + DK NA",
+    "hint": "Beton har nummer 2 og murværk nummer 6."
+  },
+  {
+    "id": "ene-01",
+    "category": "Energiramme",
+    "type": "mcq",
+    "questionText": "Hvordan beregnes energirammen for boliger efter BR18?",
+    "options": [
+      "En fast værdi på 20 kWh/m² pr. år",
+      "30,0 kWh/m² pr. år + 1.000 kWh pr. år divideret med det opvarmede etageareal",
+      "52,5 kWh/m² pr. år + 1.650 kWh pr. år divideret med det opvarmede etageareal",
+      "41,0 kWh/m² pr. år + 1.000 kWh pr. år divideret med det opvarmede etageareal"
+    ],
+    "correctAnswer": "30,0 kWh/m² pr. år + 1.000 kWh pr. år divideret med det opvarmede etageareal",
+    "explanation": "Rammen dækker tilført energi til opvarmning, ventilation, køling og varmt brugsvand. 41,0 + 1.000/A er rammen for andre bygninger end boliger.",
+    "reference": "BR18 § 259",
+    "hint": "Boliger har den laveste af de to energirammer."
+  },
+  {
+    "id": "ene-02",
+    "category": "Energiramme",
+    "type": "mcq",
+    "questionText": "Hvad er energirammen for en boligbebyggelse med 600 m² opvarmet etageareal?",
+    "options": [
+      "30,0 kWh/m² pr. år",
+      "ca. 31,7 kWh/m² pr. år",
+      "ca. 42,7 kWh/m² pr. år",
+      "ca. 46,7 kWh/m² pr. år"
+    ],
+    "correctAnswer": "ca. 31,7 kWh/m² pr. år",
+    "explanation": "30,0 + 1.000 / 600 = 30,0 + 1,67 ≈ 31,7 kWh/m² pr. år. Jo større areal, jo tættere kommer rammen på 30,0.",
+    "reference": "BR18 § 259",
+    "hint": "Tillægget er 1.000 divideret med arealet."
+  },
+  {
+    "id": "ene-03",
+    "category": "Energiramme",
+    "type": "paragraph",
+    "questionText": "Hvilken paragraf i BR18 indeholder kravet om, at luftskiftet gennem utætheder højst må være 1,0 l/s pr. m² ved 50 Pa?",
+    "options": [
+      "BR18 § 63",
+      "BR18 § 263",
+      "BR18 § 369",
+      "BR18 § 443"
+    ],
+    "correctAnswer": "BR18 § 263",
+    "explanation": "§ 263 står i kapitel 11 om energiforbrug. § 63 handler om affaldssystemer, § 369 om lyd i boliger og § 443 om ventilation. Tætheden dokumenteres ved trykprøvning efter DS/EN ISO 9972.",
+    "reference": "BR18 § 263",
+    "hint": "Energikapitlet dækker § 250–298."
+  },
+  {
+    "id": "ene-04",
+    "category": "Energiramme",
+    "type": "mcq",
+    "questionText": "Hvad er mindstekravet til U-værdien for ydervægge i nybyggeri?",
+    "options": [
+      "0,10 W/m²K",
+      "0,20 W/m²K",
+      "0,30 W/m²K",
+      "0,40 W/m²K"
+    ],
+    "correctAnswer": "0,30 W/m²K",
+    "explanation": "Mindstekravene står i BR18 bilag 2, tabel 1: 0,30 for ydervægge og 0,20 for terrændæk og tag. Værdierne er en bagstopper – det er energirammen, der i praksis bestemmer isoleringsniveauet.",
+    "reference": "BR18 § 257 og Bilag 2, tabel 1",
+    "hint": "Kravet til vægge er lempeligere end kravet til tag og terrændæk."
+  },
+  {
+    "id": "ene-05",
+    "category": "Energiramme",
+    "type": "true_false",
+    "questionText": "Hvis alle bygningsdele netop overholder mindstekravene til U-værdier, er energirammen automatisk overholdt.",
+    "correctAnswer": "Falsk",
+    "explanation": "Mindstekravene sikrer kun mod dårlige enkeltkonstruktioner. Energirammen skal eftervises ved en samlet beregning af bygningens energibehov, og den kræver normalt væsentligt bedre U-værdier end mindstekravene.",
+    "reference": "BR18 § 251, § 257 og § 259",
+    "hint": "Der er forskel på et krav til den enkelte bygningsdel og et krav til hele bygningen."
+  },
+  {
+    "id": "ene-06",
+    "category": "Energiramme",
+    "type": "mcq",
+    "questionText": "Hvilket grundlag skal energirammen eftervises på?",
+    "options": [
+      "SBi-anvisning 213 Bygningers energibehov",
+      "SBi-anvisning 224 Fugt i bygninger",
+      "DS 418 Beregning af bygningers varmetab",
+      "DS 490 Lydklassifikation af boliger"
+    ],
+    "correctAnswer": "SBi-anvisning 213 Bygningers energibehov",
+    "explanation": "BR18 kræver, at eftervisningen sker på grundlag af SBi-anvisning 213. Beregningen udføres i praksis i programmet Be18 med U-værdier og linjetab beregnet efter DS 418.",
+    "reference": "BR18 § 251, stk. 1",
+    "hint": "Anvisningen har ordet energibehov i titlen."
+  },
+  {
+    "id": "ene-07",
+    "category": "Energiramme",
+    "type": "mcq",
+    "questionText": "Hvilken grænseværdi for klimapåvirkning (LCA) gælder for nye rækkehuse fra 1. juli 2025?",
+    "options": [
+      "6,7 kg CO2-ækv./m² pr. år",
+      "8,0 kg CO2-ækv./m² pr. år",
+      "12,0 kg CO2-ækv./m² pr. år",
+      "Der er kun krav for bygninger over 1.000 m²"
+    ],
+    "correctAnswer": "6,7 kg CO2-ækv./m² pr. år",
+    "explanation": "Enfamiliehuse og rækkehuse har grænsen 6,7 over en betragtningsperiode på 50 år. Dertil kommer en særskilt grænse på 1,5 for byggeprocessen. De 12,0 var det gamle krav, som kun gjaldt over 1.000 m².",
+    "reference": "BR18 § 297–298",
+    "hint": "Grænsen blev både skærpet og udvidet til alle størrelser i 2025."
+  },
+  {
+    "id": "ene-08",
+    "category": "Energiramme",
+    "type": "mcq",
+    "questionText": "Hvad er hovedreglen for bygningsopvarmning i nybyggeri, som fik os til at ændre dispositionsforslagets gasfyr til fjernvarme?",
+    "options": [
+      "Valg af varmekilde er frit, når energirammen overholdes",
+      "Bygninger skal altid opvarmes med gulvvarme",
+      "Bygninger over 500 m² skal have egen varmepumpe",
+      "Bygningsopvarmning skal baseres på vedvarende energi"
+    ],
+    "correctAnswer": "Bygningsopvarmning skal baseres på vedvarende energi",
+    "explanation": "Fjernvarme er en tilladt forsyningsform, og Hillerød Kommunes varmeplanlægning peger på fjernvarme i Favrholm. Forsyningsformen indgår i energirammeberegningen og skal derfor være afklaret, før byggeansøgningen sendes.",
+    "reference": "BR18 § 293; Projekt: Ansøgning om fjernvarme (Hillerød Forsyning)",
+    "hint": "Tænk på, hvorfor fossile brændsler er på vej ud af nybyggeriet."
+  },
+  {
+    "id": "ind-01",
+    "category": "Indeklima",
+    "type": "mcq",
+    "questionText": "Hvor stor skal udelufttilførslen mindst være i en bolig?",
+    "options": [
+      "0,10 l/s pr. m² opvarmet etageareal",
+      "0,30 l/s pr. m² opvarmet etageareal",
+      "0,50 l/s pr. m² opvarmet etageareal",
+      "1,00 l/s pr. m² opvarmet etageareal"
+    ],
+    "correctAnswer": "0,30 l/s pr. m² opvarmet etageareal",
+    "explanation": "Kravet gælder til enhver tid – både i de enkelte beboelsesrum og i boligen samlet – også når ventilationen er behovsstyret.",
+    "reference": "BR18 § 443, stk. 1",
+    "hint": "Tallet svarer til omkring et halvt luftskifte i timen ved normal rumhøjde."
+  },
+  {
+    "id": "ind-02",
+    "category": "Indeklima",
+    "type": "mcq",
+    "questionText": "Hvor meget skal emhætten i køkkenet mindst kunne suge ud?",
+    "options": [
+      "10 l/s",
+      "15 l/s",
+      "20 l/s",
+      "35 l/s"
+    ],
+    "correctAnswer": "20 l/s",
+    "explanation": "Køkkener skal have emhætte med regulerbar mekanisk udsugning over kogepladerne og afkast til det fri. Udsugningen skal kunne forøges til mindst 20 l/s.",
+    "reference": "BR18 § 443, stk. 3",
+    "hint": "Køkkenet har det højeste krav af boligens rum."
+  },
+  {
+    "id": "ind-03",
+    "category": "Indeklima",
+    "type": "mcq",
+    "questionText": "Hvor meget skal udsugningen fra et badeværelse med wc mindst kunne forøges til?",
+    "options": [
+      "5 l/s",
+      "10 l/s",
+      "15 l/s",
+      "20 l/s"
+    ],
+    "correctAnswer": "15 l/s",
+    "explanation": "Bade- og wc-rum skal kunne suge mindst 15 l/s. Særskilt wc-rum og bryggers har kravet 10 l/s – det gælder fx vaskerummet i kælderen.",
+    "reference": "BR18 § 443, stk. 4",
+    "hint": "Lavere end køkkenet, højere end et særskilt wc."
+  },
+  {
+    "id": "ind-04",
+    "category": "Indeklima",
+    "type": "mcq",
+    "questionText": "Hvordan kan dagslyskravet til beboelsesrum og køkken dokumenteres på den enkle måde?",
+    "options": [
+      "Glasarealet svarer til mindst 10 % af gulvarealet",
+      "Alle rum har mindst ét vindue mod syd",
+      "Glasarealet svarer til mindst 22 % af gulvarealet",
+      "Rumhøjden er mindst 2,5 m"
+    ],
+    "correctAnswer": "Glasarealet svarer til mindst 10 % af gulvarealet",
+    "explanation": "Alternativt kan man eftervise 300 lux på mindst halvdelen af gulvarealet i mindst halvdelen af dagslystimerne. Glasarealet skal korrigeres for skygger og glassets lystransmittans – husk altanen over stuen.",
+    "reference": "BR18 § 379",
+    "hint": "22 % er en anden grænse, som handler om vinduesareal i energireglerne."
+  },
+  {
+    "id": "ind-05",
+    "category": "Indeklima",
+    "type": "mcq",
+    "questionText": "Hvor højt må radonindholdet i indeluften højst være i nybyggeri?",
+    "options": [
+      "50 Bq/m³",
+      "100 Bq/m³",
+      "200 Bq/m³",
+      "400 Bq/m³"
+    ],
+    "correctAnswer": "100 Bq/m³",
+    "explanation": "Radon skal begrænses ved at gøre konstruktionen mod undergrunden lufttæt eller ved lige så effektive tiltag. Det er særligt relevant for kældervægge, kældergulv og rørgennemføringer i vores projekt.",
+    "reference": "BR18 § 332",
+    "hint": "Det er et rundt, trecifret tal."
+  },
+  {
+    "id": "ind-06",
+    "category": "Indeklima",
+    "type": "true_false",
+    "questionText": "BR18 stiller krav til lydisolationen mellem rum i samme bolig, fx gennem etageadskillelsen ED1.",
+    "correctAnswer": "Falsk",
+    "explanation": "Lydkravene gælder mellem selvstændige boliger – altså lejlighedsskellet. Trinlydsdæmpningen i ED1 (lydkiler og mineraluld) er et komfortvalg, ikke et lovkrav.",
+    "reference": "BR18 § 369 med vejledning; Projekt: C08.01 Kravliste ED1",
+    "hint": "Hvem generer man, når man går på sit eget gulv?"
+  },
+  {
+    "id": "ind-07",
+    "category": "Indeklima",
+    "type": "mcq",
+    "questionText": "Hvilken temperaturvirkningsgrad skal varmegenvindingen mindst have i et ventilationsanlæg, der forsyner én bolig?",
+    "options": [
+      "50 %",
+      "67 %",
+      "80 %",
+      "95 %"
+    ],
+    "correctAnswer": "80 %",
+    "explanation": "Kravet gælder den tørre temperaturvirkningsgrad for anlæg, der forsyner én bolig. Vi har valgt ventilationsanlæg med varmegenvinding i hver bolig.",
+    "reference": "BR18 § 435; Projekt: Referat bygherremøde 1",
+    "hint": "Kravet er skrapt, men ikke i nærheden af 100 %."
+  },
+  {
+    "id": "ind-08",
+    "category": "Indeklima",
+    "type": "mcq",
+    "questionText": "Hvornår anses det termiske indeklima i en bolig normalt for tilfredsstillende om sommeren?",
+    "options": [
+      "Højst 500 timer over 25 °C og 100 timer over 26 °C pr. år",
+      "Højst 100 timer over 27 °C og 25 timer over 28 °C pr. år",
+      "Der er ingen krav, når vinduerne i rummet kan åbnes",
+      "Temperaturen må aldrig komme over 26 °C i opholdsrum"
+    ],
+    "correctAnswer": "Højst 100 timer over 27 °C og 25 timer over 28 °C pr. år",
+    "explanation": "For boliger kan eftervisningen ske ved en forenklet beregning, typisk i Be18. Store glaspartier mod syd og ovenlys over trapperummet er de steder, hvor overtemperatur skal tjekkes.",
+    "reference": "BR18 § 385–386 med vejledning",
+    "hint": "Kravet er udtrykt som et antal timer over to temperaturgrænser."
+  },
+  {
+    "id": "mat-01",
+    "category": "Materialevalg",
+    "type": "mcq",
+    "questionText": "Hvorfor anbefaler vores egenskabsanalyse C24-bjælker frem for CLT-bjælker i etageadskillelsen ED1?",
+    "options": [
+      "Lokalplan 478 tillader kun konstruktionstræ i etageadskillelser",
+      "CLT må efter Eurocode 5 ikke bruges som bjælker i etageadskillelser",
+      "C24 har dokumenteret bedre brandmodstand end CLT uden beklædning",
+      "Loftet skjules bag gips, og C24 er en billigere standardvare med kort leveringstid"
+    ],
+    "correctAnswer": "Loftet skjules bag gips, og C24 er en billigere standardvare med kort leveringstid",
+    "explanation": "Den arkitektoniske begrundelse for CLT er det synlige træ. Når bjælkelaget alligevel dækkes af 2 lag gips, taler pris, tilgængelighed og udførelseserfaring for C24 – uden at det ændrer valget af CLT til vægge.",
+    "reference": "Projekt: C05.05 Egenskabsanalyse ED1; C08.01 Kravliste ED1",
+    "hint": "Spørg, hvad man kan se af bjælkelaget, når loftet er færdigt."
+  },
+  {
+    "id": "mat-02",
+    "category": "Materialevalg",
+    "type": "mcq",
+    "questionText": "Hvilket materiale udføres fundamenter og kældervægge i – og hvorfor?",
+    "options": [
+      "Letklinkerblokke, fordi de har det laveste CO2-aftryk pr. m²",
+      "In situ-støbt beton, fordi konstruktionen skal modstå jordtryk og fugt",
+      "Murværk i tegl, fordi stueetagens facade også er muret",
+      "CLT med fugtspærre, fordi hele bæresystemet skal være i træ"
+    ],
+    "correctAnswer": "In situ-støbt beton, fordi konstruktionen skal modstå jordtryk og fugt",
+    "explanation": "Træ under terræn er ikke fugtmæssigt robust. Beton optager jordtryk og danner et tæt og stabilt underlag for CLT-væggene over terræn.",
+    "reference": "Projekt: C04.04 A-konstruktionsdokumentation (KA1); Referat bygherremøde 1",
+    "hint": "Tænk på, hvad der trykker på en kældervæg udefra."
+  },
+  {
+    "id": "mat-03",
+    "category": "Materialevalg",
+    "type": "true_false",
+    "questionText": "De bærende trækonstruktioner i projektet er forudsat i anvendelsesklasse 1, dvs. tørt og opvarmet miljø.",
+    "correctAnswer": "Sandt",
+    "explanation": "Anvendelsesklassen bestemmer træets styrke- og deformationsfaktorer (k_mod og k_def). Forudsætningen kræver, at træet er beskyttet mod nedbør og opfugtning i hele levetiden – også på byggepladsen.",
+    "reference": "DS/EN 1995-1-1; Projekt: C04.04 A-konstruktionsdokumentation",
+    "hint": "CLT-væggene står på den varme side af isoleringen."
+  },
+  {
+    "id": "mat-04",
+    "category": "Materialevalg",
+    "type": "mcq",
+    "questionText": "Hvad angiver 'K1 10' i beklædningsklassen K1 10 B-s1,d0, som beskytter CLT-væggene?",
+    "options": [
+      "Konstruktionen bevarer sin bæreevne i 10 minutter under brand",
+      "Beklædningen beskytter materialet bagved mod antændelse i 10 minutter",
+      "Beklædningen skal være mindst 10 mm tyk og monteres i ét lag",
+      "Beklædningen må højst anvendes 10 m over terræn uden sprinkling"
+    ],
+    "correctAnswer": "Beklædningen beskytter materialet bagved mod antændelse i 10 minutter",
+    "explanation": "K-klassen beskriver beklædningens brandbeskyttelsesevne. B-s1,d0 er materialets reaktion på brand. Vi bruger fibergips, så forkulningen af CLT-pladen udskydes.",
+    "reference": "DS/EN 13501-2; Projekt: C04.04 A-konstruktionsdokumentation",
+    "hint": "Tallet er en tid."
+  },
+  {
+    "id": "mat-05",
+    "category": "Materialevalg",
+    "type": "mcq",
+    "questionText": "Hvad betyder 's1' i materialeklassen B-s1,d0?",
+    "options": [
+      "Overfladen er stødsikker",
+      "Ingen brændende dråber",
+      "Materialet er ubrændbart",
+      "Meget begrænset røgudvikling"
+    ],
+    "correctAnswer": "Meget begrænset røgudvikling",
+    "explanation": "Bogstavet (A1–F) angiver bidraget til brand, s1–s3 røgudvikling og d0–d2 brændende dråber. d0 betyder ingen brændende dråber.",
+    "reference": "DS/EN 13501-1",
+    "hint": "s kommer af det engelske ord for røg."
+  },
+  {
+    "id": "mat-06",
+    "category": "Materialevalg",
+    "type": "mcq",
+    "questionText": "Hvilket facademateriale kræver Lokalplan 478 § 7.2 i delområde 1?",
+    "options": [
+      "Træ",
+      "Tegl",
+      "Fibercement",
+      "Puds"
+    ],
+    "correctAnswer": "Træ",
+    "explanation": "Bygherre ønsker mindst stueetagen i mursten. Derfor har vi søgt dispensation til muret stueetage med træbeklædning på 1. sal, så facaden stadig består af to materialer.",
+    "reference": "Lokalplan 478 § 7.2; Projekt: Dispensationsansøgning facade",
+    "hint": "Det er det samme materiale som bæresystemet over terræn."
+  },
+  {
+    "id": "mat-07",
+    "category": "Materialevalg",
+    "type": "mcq",
+    "questionText": "Hvilke materialer må tagrender ikke udføres i ifølge Lokalplan 478?",
+    "options": [
+      "Kobber og zink",
+      "Stål og aluminium",
+      "Plast",
+      "Alle metaller"
+    ],
+    "correctAnswer": "Kobber og zink",
+    "explanation": "Kobber og zink afgiver metaller til regnvandet. Regnvandet i delområde 1 afledes på overfladen og indgår i LAR-løsningerne, og området ligger i OSD (særlige drikkevandsinteresser).",
+    "reference": "Lokalplan 478 § 7.8; Projekt: C07 Installationsnotat N01",
+    "hint": "Tænk på, hvor tagvandet ender."
+  },
+  {
+    "id": "mat-08",
+    "category": "Materialevalg",
+    "type": "mcq",
+    "questionText": "Hvad dækker modulerne A1–A3 i en LCA-beregning af et byggemateriale?",
+    "options": [
+      "Brugsfasen: drift, vedligehold og udskiftning af materialer",
+      "Byggeprocessen: transport til byggepladsen og indbygning",
+      "Endt levetid: nedrivning, transport og affaldsbehandling",
+      "Produktfasen: råvarer, transport til fabrik og fremstilling"
+    ],
+    "correctAnswer": "Produktfasen: råvarer, transport til fabrik og fremstilling",
+    "explanation": "A4–A5 er byggeprocessen, B-modulerne brugsfasen og C-modulerne endt levetid. Tallene hentes fra materialets EPD og bruges i de LCA-værdier, vi angiver på knudepunkterne.",
+    "reference": "DS/EN 15978; BR18 § 297",
+    "hint": "A er det første bogstav – og den første fase i materialets liv."
+  },
+  {
+    "id": "det-01",
+    "category": "Detaljer",
+    "type": "mcq",
+    "questionText": "Hvilke lydkrav skal lejlighedsskellet og dets samlinger sikre mellem to rækkehuse?",
+    "options": [
+      "Luftlydisolation R'w ≥ 40 dB og trinlydniveau L'n,w ≤ 63 dB",
+      "Luftlydisolation R'w ≥ 55 dB og trinlydniveau L'n,w ≤ 53 dB",
+      "Luftlydisolation R'w ≥ 63 dB og trinlydniveau L'n,w ≤ 43 dB",
+      "Der er kun krav til luftlyd, ikke til trinlyd"
+    ],
+    "correctAnswer": "Luftlydisolation R'w ≥ 55 dB og trinlydniveau L'n,w ≤ 53 dB",
+    "explanation": "Boliger skal overholde lydklasse C i DS 490. Luftlydisolationen skal være høj, og trinlydniveauet lavt – derfor vender ulighedstegnene hver sin vej.",
+    "reference": "BR18 § 369; DS 490 lydklasse C",
+    "hint": "De to tal ligger tæt på hinanden, lige midt i 50'erne."
+  },
+  {
+    "id": "det-02",
+    "category": "Detaljer",
+    "type": "mcq",
+    "questionText": "Hvad er det vigtigste hensyn i samlingen, hvor etagedækket ED1 møder lejlighedsskellet LS1?",
+    "options": [
+      "Der skal være en ventileret spalte mellem dæk og skel",
+      "Dækket skal føres ubrudt gennem skellet for at sikre skivevirkningen",
+      "Samlingen skal kunne åbnes til inspektion",
+      "Dækket må ikke danne en flankevej, der fører lyd forbi skellet"
+    ],
+    "correctAnswer": "Dækket må ikke danne en flankevej, der fører lyd forbi skellet",
+    "explanation": "Træ er let og stift og overfører lyd effektivt. Hvis dækket binder de to boliger sammen, undergraves skellets R'w og L'n,w. Derfor er LS1 en dobbeltvæg med hulrum, og dækkene afbrydes i skellet.",
+    "reference": "Projekt: C08.01 Kravliste ED1; SBi-anvisning 237",
+    "hint": "Lyden tager den letteste vej – og det er ikke altid gennem væggen."
+  },
+  {
+    "id": "det-03",
+    "category": "Detaljer",
+    "type": "mcq",
+    "questionText": "Hvilken del af et badeværelse regnes altid som vådzone?",
+    "options": [
+      "Hele gulvet samt væggene ved bruseplads og badekar",
+      "Kun væggene bag håndvask, toilet og bruser",
+      "Kun gulvet i brusenichen og 1 m ud fra den",
+      "Hele rummet, inklusive loftet og alle vægge"
+    ],
+    "correctAnswer": "Hele gulvet samt væggene ved bruseplads og badekar",
+    "explanation": "I vådzonen kræves vandtæt membran, og på træbjælkelag skal der bruges et vådrumssystem, der er egnet til underlaget. Det gælder badeværelset på 1. sal, som står på ED1.",
+    "reference": "SBi-anvisning 252; BR18 § 339",
+    "hint": "Vand på gulvet løber, hvor det vil."
+  },
+  {
+    "id": "det-04",
+    "category": "Detaljer",
+    "type": "mcq",
+    "questionText": "Gulvafløbet i vaskerummet i kælderen ligger under opstuvningskoten. Hvordan sikres der mod oversvømmelse?",
+    "options": [
+      "Ved at udlufte faldstammen over tag med større rør",
+      "Med en ekstra dyb vandlås i kælderens gulvafløb",
+      "Med pumpebrønd eller højvandslukke på kælderens afløb",
+      "Ved at øge faldet på kælderens ledninger til 40 ‰"
+    ],
+    "correctAnswer": "Med pumpebrønd eller højvandslukke på kælderens afløb",
+    "explanation": "Ved risiko for opstemning i hovedafløbet skal bygningen sikres mod skadelig oversvømmelse. Valget mellem pumpe og højvandslukke træffes, når Hillerød Forsyning har oplyst opstuvningskoten.",
+    "reference": "BR18 § 71; DS 432; Projekt: C07 Installationsnotat N01",
+    "hint": "Vand løber ikke opad af sig selv – og kloakvand må ikke løbe baglæns."
+  },
+  {
+    "id": "det-05",
+    "category": "Detaljer",
+    "type": "true_false",
+    "questionText": "Et højvandslukke bør placeres på den ledning, der også fører afløbet fra stueetagen og 1. sal.",
+    "correctAnswer": "Falsk",
+    "explanation": "Når lukket er lukket, kan vandet ovenfra ikke komme væk og løber ud af den laveste åbning – gulvafløbet i kælderen. Sikringen må kun omfatte de installationer, der ligger under opstuvningskoten, så vaskerummet får sin egen ledning.",
+    "reference": "DS 432; Projekt: C07 Installationsnotat N01",
+    "hint": "Hvor løber badevandet fra 1. sal hen, hvis ledningen er spærret?"
+  },
+  {
+    "id": "det-06",
+    "category": "Detaljer",
+    "type": "mcq",
+    "questionText": "I hvilken enhed angives linjetabet (Ψ) i et knudepunkt i klimaskærmen?",
+    "options": [
+      "W/m²K",
+      "m²K/W",
+      "W/mK",
+      "W/K"
+    ],
+    "correctAnswer": "W/mK",
+    "explanation": "Linjetab er varmetab pr. meter samling – fx ved fundament og omkring vinduer. U-værdi måles i W/m²K, punkttab (χ) i W/K og isolans (R) i m²K/W.",
+    "reference": "DS 418; Projekt: Opgavetekst E26",
+    "hint": "Et linjetab følger en længde, ikke et areal."
+  },
+  {
+    "id": "det-07",
+    "category": "Detaljer",
+    "type": "mcq",
+    "questionText": "Hvor må en dampspærre højst være placeret i en isoleret ydervæg?",
+    "options": [
+      "Præcis midt i isoleringen, så begge sider isoleres ens",
+      "På den kolde side af isoleringen, lige bag vindspærren",
+      "Højst 1/3 inde i isoleringen regnet fra den varme side",
+      "Placeringen er uden betydning, når samlingerne er tætte"
+    ],
+    "correctAnswer": "Højst 1/3 inde i isoleringen regnet fra den varme side",
+    "explanation": "Ligger dampspærren for koldt, kan fugt fra indeluften kondensere på den. En tilbagetrukket dampspærre giver plads til installationer på den varme side, så spærren ikke perforeres.",
+    "reference": "SBi-anvisning 224",
+    "hint": "Reglen kaldes ofte 1/3-reglen."
+  },
+  {
+    "id": "det-08",
+    "category": "Detaljer",
+    "type": "true_false",
+    "questionText": "Faldstammens bæringer må gerne fastgøres i lejlighedsskellet, når rørene lydisoleres.",
+    "correctAnswer": "Falsk",
+    "explanation": "Afløbsstøj er strukturbåren, og bærende trækonstruktioner er en effektiv flankevej. Faldstammen føres i en selvstændig skakt, der ikke deler væg med lejlighedsskellet, og bæringerne fastgøres til skaktens egne stolper med lyddæmpende indlæg.",
+    "reference": "Projekt: C07 Installationsnotat N01; BR18 § 369",
+    "hint": "Naboen skal ikke kunne høre, når der skylles ud."
+  },
+  {
+    "id": "tid-01",
+    "category": "Tidsplan og proces",
+    "type": "mcq",
+    "questionText": "Hvilke uger er afsat til myndighedsprojektet i semesterplanen?",
+    "options": [
+      "Uge 36–43",
+      "Uge 44–46",
+      "Uge 47–51",
+      "Uge 2–4"
+    ],
+    "correctAnswer": "Uge 44–46",
+    "explanation": "Projektforslaget ligger i uge 36–43, myndighedsprojektet i uge 44–46 og udbudsprojektet i uge 47–51. Eksamen ligger i uge 2–4 i januar.",
+    "reference": "Projekt: Opgavetekst E26, Semestrets forløb",
+    "hint": "Det er den korteste af de tre faser."
+  },
+  {
+    "id": "tid-02",
+    "category": "Tidsplan og proces",
+    "type": "mcq",
+    "questionText": "I hvilke uger holdes de tre bygherremøder?",
+    "options": [
+      "Uge 36, 38 og 40",
+      "Uge 38, 40 og 42",
+      "Uge 40, 43 og 46",
+      "Uge 44, 46 og 51"
+    ],
+    "correctAnswer": "Uge 38, 40 og 42",
+    "explanation": "Uge 38: granskning, analyser og forslag til byggesystem. Uge 40: fokus på konstruktion og statik. Uge 42: afslutning af projektforslaget med fokus på installationer. Uge 46 er evaluering og generalprøve på eksamen.",
+    "reference": "Projekt: Opgavetekst E26",
+    "hint": "Møderne ligger med to ugers mellemrum i projektforslagsfasen."
+  },
+  {
+    "id": "tid-03",
+    "category": "Tidsplan og proces",
+    "type": "mcq",
+    "questionText": "Hvem godkender den opdaterede hovedtidsplan i projektforslagsfasen?",
+    "options": [
+      "Projekteringslederen",
+      "Entreprenøren",
+      "Bygherren",
+      "Kommunen"
+    ],
+    "correctAnswer": "Bygherren",
+    "explanation": "Projekteringslederen opdaterer hovedtidsplanen med bidrag fra rådgiverne, men det er bygherren, der godkender den – ligesom ydelsesplan, budget og selve projektforslaget.",
+    "reference": "YBL 2018, afsnit 3.2.4 og 3.2.8",
+    "hint": "Den, der betaler, godkender."
+  },
+  {
+    "id": "tid-04",
+    "category": "Tidsplan og proces",
+    "type": "true_false",
+    "questionText": "Entreprenøren har ret til tidsfristforlængelse, hvis forsinkelsen skyldes ændringer, som bygherren har krævet.",
+    "correctAnswer": "Sandt",
+    "explanation": "Det samme gælder bl.a. ved bygherrens egne forhold, anden entreprenørs forsinkelse, usædvanligt vejrlig og offentlige påbud. Forsinkelse uden ret til forlængelse er ansvarspådragende og kan udløse dagbod.",
+    "reference": "AB 18 § 39 og § 40",
+    "hint": "Hvem har forårsaget forsinkelsen?"
+  },
+  {
+    "id": "tid-05",
+    "category": "Tidsplan og proces",
+    "type": "mcq",
+    "questionText": "Hvornår holdes der eftersyn af byggeriet efter AB 18?",
+    "options": [
+      "1 år og 5 år efter afleveringen",
+      "Kun ved afleveringen",
+      "6 måneder og 2 år efter afleveringen",
+      "Hvert år i 10 år"
+    ],
+    "correctAnswer": "1 år og 5 år efter afleveringen",
+    "explanation": "Bygherren indkalder til 1-års eftersyn og igen til 5-års eftersyn, som skal ligge inden mangelansvaret ophører 5 år efter afleveringen.",
+    "reference": "AB 18 § 56 og § 57",
+    "hint": "Det sidste eftersyn hænger sammen med mangelansvarets længde."
+  },
+  {
+    "id": "tid-06",
+    "category": "Tidsplan og proces",
+    "type": "mcq",
+    "questionText": "Entreprenøren har færdigmeldt sit arbejde til bygherren. Hvornår skal afleveringsforretningen senest holdes?",
+    "options": [
+      "Senest 1 år efter færdigmeldingen, samtidig med det første eftersyn",
+      "Senest 20 arbejdsdage efter, at entrepriseaftalen er underskrevet af begge parter",
+      "Først når kommunen har givet ibrugtagningstilladelse til hele bebyggelsen",
+      "Senest 10 arbejdsdage efter det færdiggørelsestidspunkt, entreprenøren har angivet"
+    ],
+    "correctAnswer": "Senest 10 arbejdsdage efter det færdiggørelsestidspunkt, entreprenøren har angivet",
+    "explanation": "Arbejdet anses for afleveret, når afleveringsforretningen har fundet sted, medmindre der påvises væsentlige mangler. Afleveringen flytter risikoen til bygherren og starter 5-årsfristen.",
+    "reference": "AB 18 § 45",
+    "hint": "Fristen er halvt så lang som vedståelsesfristen for tilbud."
+  },
+  {
+    "id": "tid-07",
+    "category": "Tidsplan og proces",
+    "type": "mcq",
+    "questionText": "Hvor lang frist skal naboerne mindst have til at komme med bemærkninger, før kommunen kan give dispensation fra lokalplanen?",
+    "options": [
+      "1 uge",
+      "2 uger",
+      "4 uger",
+      "8 uger"
+    ],
+    "correctAnswer": "2 uger",
+    "explanation": "Naboorienteringen er grunden til, at dispensationsansøgninger om facade og tag skal sendes tidligt – sagsbehandlingen kan ellers forsinke byggeansøgningen i myndighedsfasen.",
+    "reference": "Planloven § 20; Projekt: Dispensationsansøgning facade",
+    "hint": "Fristen er kort, men kommunens egen sagsbehandling kommer oveni."
+  },
+  {
+    "id": "tid-08",
+    "category": "Tidsplan og proces",
+    "type": "mcq",
+    "questionText": "Hvad er den kritiske vej i en tidsplan?",
+    "options": [
+      "Den længste kæde af aktiviteter uden slæk – den bestemmer projektets sluttidspunkt",
+      "Den kæde af aktiviteter, der samlet koster flest penge at gennemføre",
+      "Den korteste rute gennem tidsplanen fra første til sidste aktivitet",
+      "De aktiviteter, der kræver flest personer på byggepladsen samtidig"
+    ],
+    "correctAnswer": "Den længste kæde af aktiviteter uden slæk – den bestemmer projektets sluttidspunkt",
+    "explanation": "Forsinkes en aktivitet på den kritiske vej, forsinkes hele projektet. Aktiviteter uden for den kritiske vej har slæk og kan flyttes uden at ændre sluttidspunktet.",
+    "reference": "Tidsplanlægning: kritisk vej-metoden (CPM); YBL 2018, afsnit 3.2.4",
+    "hint": "Kritisk betyder her: ingen luft at give af."
+  },
+  {
+    "id": "tid-09",
+    "category": "Tidsplan og proces",
+    "type": "mcq",
+    "questionText": "Hvorfor skal forsyningsformen (fjernvarme) være afklaret, inden projektforslagsfasen afsluttes?",
+    "options": [
+      "Den indgår i energirammeberegningen og skal dokumenteres i byggeansøgningen",
+      "Kommunen vælger ellers selv varmekilden, når byggetilladelsen gives",
+      "Fjernvarme kræver, at der først vedtages et tillæg til lokalplanen",
+      "Entreprenøren skal bestille radiatorer og rør, inden udbudsfasen begynder"
+    ],
+    "correctAnswer": "Den indgår i energirammeberegningen og skal dokumenteres i byggeansøgningen",
+    "explanation": "Alle afgørende beslutninger skal være truffet i projektforslaget. Forsyningsselskabets tilslutningsvilkår, temperatursæt og målerplacering skal desuden indarbejdes i myndigheds- og udbudsprojektet.",
+    "reference": "Projekt: Ansøgning om fjernvarme, afsnit 6; YBL 2018, afsnit 3.2",
+    "hint": "Tænk på, hvad næste fase skal bruge beslutningen til."
+  }
+]
