@@ -4,15 +4,19 @@
 // DELETE /api/scores -> nulstil for hele gruppen (gemmer tidspunktet)
 //
 // SÅDAN DELES STILLINGEN:
-// Scores ligger i en lille Redis-database (Upstash), som oprettes i Vercel under
-// Storage. Vercel sætter selv adresse og nøgle som miljøvariabler. Uden dem
-// svarer ruten 503, og appen kører videre med scores kun på telefonen.
+// Scores ligger i en lille Redis-database, som oprettes i Vercel under Storage.
+// Vercel sætter selv adressen som miljøvariabel. Begge slags virker:
+//  - Upstash (KV_REST_API_URL + KV_REST_API_TOKEN, eller UPSTASH_REDIS_REST_*)
+//  - Redis (REDIS_URL / KV_URL, fx "Redis" fra Vercel Marketplace)
+// Uden database svarer ruten 503, og appen kører videre med scores kun på
+// telefonen. Åbn /api/scores i browseren for at se, hvad appen har fundet.
 //
 // Ruten kræver en kørende server, så den virker på Vercel, men ikke på
 // GitHub Pages (scripts/build-pages.js lægger den til side under eksporten).
 // ---------------------------------------------------------------------------
 
 import { NextResponse } from "next/server";
+import { createClient } from "redis";
 import { PLAYERS } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
@@ -20,32 +24,71 @@ export const dynamic = "force-dynamic";
 const SCORES_KEY = "quiz:scores";
 const RESET_KEY = "quiz:resetAt";
 
-function redisConfig() {
+function restConfig() {
   const url = process.env.KV_REST_API_URL ?? process.env.UPSTASH_REDIS_REST_URL;
   const token = process.env.KV_REST_API_TOKEN ?? process.env.UPSTASH_REDIS_REST_TOKEN;
   return url && token ? { url, token } : null;
 }
 
-/** Kører en række Redis-kommandoer i ét kald (Upstash REST "pipeline"). */
-async function redis(commands: (string | number)[][]): Promise<unknown[]> {
-  const config = redisConfig();
-  if (!config) throw new Error("Ingen database");
-  const response = await fetch(`${config.url}/pipeline`, {
-    method: "POST",
-    headers: { Authorization: `Bearer ${config.token}` },
-    body: JSON.stringify(commands),
-    cache: "no-store",
-  });
-  if (!response.ok) throw new Error(`Redis svarede ${response.status}`);
-  const results = (await response.json()) as { result?: unknown; error?: string }[];
-  return results.map((item) => {
-    if (item.error) throw new Error(item.error);
-    return item.result;
-  });
+function redisUrl() {
+  const url = process.env.REDIS_URL ?? process.env.KV_URL;
+  return url && /^rediss?:\/\//.test(url) ? url : null;
 }
 
+const redisConfig = () => restConfig() ?? redisUrl();
+
+// Forbindelsen genbruges mellem kald, så længe serveren lever.
+let client: ReturnType<typeof createClient> | null = null;
+async function tcpClient(url: string) {
+  if (!client) {
+    client = createClient({ url });
+    client.on("error", () => {
+      // fejl håndteres ved det enkelte kald
+    });
+  }
+  if (!client.isOpen) await client.connect();
+  return client;
+}
+
+/** Kører en række Redis-kommandoer og returnerer svarene i samme rækkefølge. */
+async function redis(commands: (string | number)[][]): Promise<unknown[]> {
+  const rest = restConfig();
+  if (rest) {
+    // Upstash: alle kommandoer i ét HTTP-kald ("pipeline").
+    const response = await fetch(`${rest.url}/pipeline`, {
+      method: "POST",
+      headers: { Authorization: `Bearer ${rest.token}` },
+      body: JSON.stringify(commands),
+      cache: "no-store",
+    });
+    if (!response.ok) throw new Error(`Redis svarede ${response.status}`);
+    const results = (await response.json()) as { result?: unknown; error?: string }[];
+    return results.map((item) => {
+      if (item.error) throw new Error(item.error);
+      return item.result;
+    });
+  }
+  const url = redisUrl();
+  if (!url) throw new Error("Ingen database");
+  const redisClient = await tcpClient(url);
+  const results: unknown[] = [];
+  for (const command of commands) {
+    results.push(await redisClient.sendCommand(command.map(String)));
+  }
+  return results;
+}
+
+/** Viser hvilke database-variabler, der findes (kun navnene – aldrig værdierne). */
 const notConfigured = () =>
-  NextResponse.json({ enabled: false }, { status: 503 });
+  NextResponse.json(
+    {
+      enabled: false,
+      found: Object.keys(process.env).filter((key) =>
+        /^(KV_|REDIS|UPSTASH)/.test(key)
+      ),
+    },
+    { status: 503 }
+  );
 
 const isNumber = (value: unknown): value is number =>
   typeof value === "number" && Number.isFinite(value);
@@ -84,7 +127,10 @@ export async function GET() {
   try {
     return NextResponse.json({ enabled: true, ...(await readAll()) });
   } catch {
-    return NextResponse.json({ enabled: true, error: true }, { status: 502 });
+    return NextResponse.json(
+      { enabled: true, error: "Databasen kunne ikke nås" },
+      { status: 502 }
+    );
   }
 }
 
